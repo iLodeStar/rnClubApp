@@ -20,19 +20,22 @@ class Schedule extends React.Component {
                     content={<Sidebar navigation={this.props.navigation} />}
                     onClose={() => this.closeDrawer()}
                     tapToClose={true}>
-                    <Header>
-                        <Left>
+                    <Header style={{ backgroundColor: "black" }}>
+						<Left>
 
-                            <Button transparent onPress={() => this.openDrawer()} >
-                                <Icon name='menu' />
-                            </Button>
-
-                        </Left>
-                        <Body>
-                            <Title>Schedule</Title>
-                        </Body>
-                        <Right />
-                    </Header>
+							<Button transparent onPress={() => this.openDrawer()} >
+								<Icon name='menu' />
+							</Button>
+						</Left>
+						<Body>
+							<Title>Schedule</Title>
+						</Body>
+						<Right >
+							<Button transparent  onPress={() => { this.props.navigation.navigate('Login') }} >
+								<Icon name='log-out' />
+							</Button>
+						</Right>
+					</Header>
                     <Content>
                         <List>
                             <Card  >
@@ -40,45 +43,84 @@ class Schedule extends React.Component {
                                     <Thumbnail square large source={{ uri: "https://cdn.pixabay.com/photo/2017/06/10/06/39/calender-2389150_960_720.png" }} />
                                     <Text>{"         "}Schedule: Daily and Events</Text>
                                 </CardItem>
-                                <CardItem style={{ backgroundColor: "#d8d8d8" }}>
+                                </Card>
+                                <Card>
+                                <CardItem style={{ backgroundColor: "#ff4343" }}>
                                     <Body>
                                         <Text>
-                                            Squad Scrims : Mon-Sat, 11:30 - 14:30 (IST)
+                                            Badminton Tryouts : May 24 at 11:30 (IST)
                                         </Text>
                                     </Body>
                                 </CardItem>
-                                <CardItem style={{ backgroundColor: "#d8d8d8" }}>
+                                </Card>
+                                <Card>
+                                <CardItem style={{ backgroundColor: "#5656ff" }}>
                                     <Body>
                                         <Text>
-                                            FNCS Heats : Sat, May 22, 2021 at 13:30(IST)
+                                            Cricket Zonals : May 24 - 28, 2021 at 09:00(IST)
                                         </Text>
                                     </Body>
                                 </CardItem>
-                                <CardItem style={{ backgroundColor: "#d8d8d8" }}>
+                                </Card>
+                                <Card>
+                                <CardItem style={{ backgroundColor: "#56ff56" }}>
                                     <Body>
                                         <Text>
-                                            FNCS Qualifier : Sun, May 23, 2021 at 16:30(IST)
+                                            Swimming class : May 24, 2021 at 16:30(IST)
                                         </Text>
                                     </Body>
                                 </CardItem>
-                                <CardItem footer style={{ backgroundColor: "#d8d8d8" }}>
-                                    <Text>Watch us Dominate everyday on our Twitch Stream : epicCentreStreams
-                                    </Text>
+                                </Card>
 
+                                <Card>
+                                <CardItem style={{ backgroundColor: "#ff4343" }}>
+                                    <Body>
+                                        <Text>
+                                            Table Tennis Club : May 26 at 10:30 (IST)
+                                        </Text>
+                                    </Body>
                                 </CardItem>
-                                <CardItem footer style={{ backgroundColor: "#d8d8d8" }}>
-                                    <Text>Highlights and other contetnt on our Youtube channel Stream : epicCentre
-                                    </Text>
+                                </Card>
+                                <Card>
+                                <CardItem style={{ backgroundColor: "#5656ff" }}>
+                                    <Body>
+                                        <Text>
+                                            Basketball trials : May 27, 2021 at 11:00(IST)
+                                        </Text>
+                                    </Body>
                                 </CardItem>
-                            </Card>
+                                </Card>
+                                <Card>
+                                <CardItem style={{ backgroundColor: "#56ff56" }}>
+                                    <Body>
+                                        <Text>
+                                            Volleyball pro-tips : May 28, 2021 at 12:30(IST)
+                                        </Text>
+                                    </Body>
+                                </CardItem>
+                                </Card>
+                          
                         </List>
                     </Content>
                     <Footer>
-                        <FooterTab>
-                            <Button full>
-                                <Text>Copyright epic centre 2021.</Text>
-                            </Button>
-                        </FooterTab>
+                    <FooterTab>
+							<Button vertical >
+								<Icon  name="newspaper"  onPress={() => { this.props.navigation.navigate('Home') }}/>
+								<Text>Home</Text>
+							</Button>
+							<Button vertical>
+								<Icon name="person"  onPress={() => { this.props.navigation.navigate('Members') }} />
+								<Text>Members</Text>
+							</Button>
+							<Button vertical >
+								<Icon name="stats-chart"  onPress={() => { this.props.navigation.navigate('Wins') }} />
+								<Text>Wins</Text>
+							</Button>
+							<Button vertical active>
+								<Icon active name="calendar"  onPress={() => { this.props.navigation.navigate('Schedule') }} />
+								<Text>Schedule</Text>
+							</Button>
+						</FooterTab>
                     </Footer>
                 </Drawer>
             </Container>

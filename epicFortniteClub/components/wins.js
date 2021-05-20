@@ -20,19 +20,22 @@ class Wins extends React.Component {
                     content={<Sidebar navigation={this.props.navigation} />}
                     onClose={() => this.closeDrawer()}
                     tapToClose={true}>
-                    <Header>
-                        <Left>
+                    <Header style={{ backgroundColor: "black" }}>
+						<Left>
 
-                            <Button transparent onPress={() => this.openDrawer()} >
-                                <Icon name='menu' />
-                            </Button>
-
-                        </Left>
-                        <Body>
-                            <Title>Wins</Title>
-                        </Body>
-                        <Right />
-                    </Header>
+							<Button transparent onPress={() => this.openDrawer()} >
+								<Icon name='menu' />
+							</Button>
+						</Left>
+						<Body>
+							<Title>Wins</Title>
+						</Body>
+						<Right >
+							<Button transparent  onPress={() => { this.props.navigation.navigate('Login') }} >
+								<Icon name='log-out' />
+							</Button>
+						</Right>
+					</Header>
                     <Content>
                         <List>
                             <Card  >
@@ -56,11 +59,24 @@ class Wins extends React.Component {
                         </List>
                     </Content>
                     <Footer>
-                        <FooterTab>
-                            <Button full>
-                                <Text>Copyright epic centre 2021.</Text>
-                            </Button>
-                        </FooterTab>
+                    <FooterTab>
+							<Button vertical >
+								<Icon  name="newspaper"  onPress={() => { this.props.navigation.navigate('Home') }}/>
+								<Text>Home</Text>
+							</Button>
+							<Button vertical>
+								<Icon name="person"  onPress={() => { this.props.navigation.navigate('Members') }} />
+								<Text>Members</Text>
+							</Button>
+							<Button vertical active>
+								<Icon active name="stats-chart"  onPress={() => { this.props.navigation.navigate('Wins') }} />
+								<Text>Wins</Text>
+							</Button>
+							<Button vertical>
+								<Icon name="calendar"  onPress={() => { this.props.navigation.navigate('Schedule') }} />
+								<Text>Schedule</Text>
+							</Button>
+						</FooterTab>
                     </Footer>
                 </Drawer>
             </Container>

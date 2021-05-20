@@ -52,20 +52,12 @@ export default class Sidebar extends Component {
                             <Text>Schedule</Text>
                         </Body>
                     </ListItem>
-                    <ListItem icon onPress={() => { this.props.navigation.navigate('SignUp') }}>
-                        <Left>
-                            <Icon name="person-add" />
-                        </Left>
-                        <Body >
-                            <Text>Sign Up</Text>
-                        </Body>
-                    </ListItem>
                     <ListItem icon onPress={() => { this.props.navigation.navigate('Login') }}>
                         <Left>
-                            <Icon name="log-in" />
+                            <Icon name="log-out" />
                         </Left>
                         <Body >
-                            <Text>Login</Text>
+                            <Text>Sign Out</Text>
                         </Body>
                     </ListItem>
                 </List>

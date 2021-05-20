@@ -21,25 +21,41 @@ class Home extends React.Component {
 					content={<Sidebar navigation={this.props.navigation} />}
 					onClose={() => this.closeDrawer()}
 					tapToClose={true}>
-					<Header>
+					<Header style={{ backgroundColor: "black" }}>
 						<Left>
 
 							<Button transparent onPress={() => this.openDrawer()} >
 								<Icon name='menu' />
 							</Button>
-
 						</Left>
 						<Body>
-							<Title>Epic News</Title>
+							<Title>Home</Title>
 						</Body>
-						<Right />
+						<Right >
+							<Button transparent  onPress={() => { this.props.navigation.navigate('Login') }} >
+								<Icon name='log-out' />
+							</Button>
+						</Right>
 					</Header>
 					<Notices />
 					<Updates />
 					<Footer>
 						<FooterTab>
-							<Button full>
-								<Text>Copyright epic centre 2021.</Text>
+							<Button vertical active>
+								<Icon active name="newspaper"  onPress={() => { this.props.navigation.navigate('Home') }}/>
+								<Text>Home</Text>
+							</Button>
+							<Button vertical>
+								<Icon name="person"  onPress={() => { this.props.navigation.navigate('Members') }} />
+								<Text>Members</Text>
+							</Button>
+							<Button vertical >
+								<Icon name="stats-chart"  onPress={() => { this.props.navigation.navigate('Wins') }} />
+								<Text>Wins</Text>
+							</Button>
+							<Button vertical>
+								<Icon name="calendar"  onPress={() => { this.props.navigation.navigate('Schedule') }} />
+								<Text>Schedule</Text>
 							</Button>
 						</FooterTab>
 					</Footer>

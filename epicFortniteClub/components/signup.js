@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, Drawer, Item as FormItem, Label, Input, Form } from 'native-base';
 
 import Sidebar from './sidebar';
+import { Image, View } from 'react-native';
 
 class SignUp extends React.Component {
 
@@ -14,26 +15,17 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <Container style={{ paddingTop: 20 }}>
-                <Drawer
-                    ref={(ref) => { this.drawer = ref; }}
-                    content={<Sidebar navigation={this.props.navigation} />}
-                    onClose={() => this.closeDrawer()}
-                    tapToClose={true}>
-                    <Header>
-                        <Left>
-
-                            <Button transparent onPress={() => this.openDrawer()} >
-                                <Icon name='menu' />
-                            </Button>
-
-                        </Left>
+            <Container>
+                    <Header style={{ backgroundColor: "black" }}>
                         <Body>
-                            <Title>Sign Up</Title>
+                        <Title >Create Account</Title>
                         </Body>
-                        <Right />
                     </Header>
                     <Content>
+                    <Body>
+                        <Image source={require('../assets/logo.jpeg')} style={{ marginTop: 10, width: 160, height: 160 }} resizeMode="contain" />
+
+                    </Body>
                         <Form>
                             <FormItem floatingLabel>
                                 <Label>Email</Label>
@@ -47,9 +39,15 @@ class SignUp extends React.Component {
                                 <Label>Confirm Password</Label>
                                 <Input secureTextEntry={true} />
                             </FormItem>
-                            <Button full primary style={{ paddingBottom: 4, marginTop: 60 }}>
-                                <Text> Sign Up </Text>
+                            <Button block primary style={{ paddingBottom: 4, marginTop: 60 }} onPress={() => { this.props.navigation.navigate('Home') }}>
+                            <Text> Sign Up </Text>
+                        </Button>
+                            <View style={{ paddingBottom: 4, marginTop: 30, alignSelf: "center", flexDirection: "row", justifyContent: "center", alignItems:"center" }}>
+                            <Text>Already Registered?</Text>
+                            <Button onPress={() => { this.props.navigation.navigate('Login') }} transparent style={{marginLeft:-10}}>
+                                <Text>Login</Text>
                             </Button>
+                        </View>
                         </Form>
                     </Content>
                     <Footer>
@@ -59,7 +57,6 @@ class SignUp extends React.Component {
                             </Button>
                         </FooterTab>
                     </Footer>
-                </Drawer>
             </Container>
         );
     }

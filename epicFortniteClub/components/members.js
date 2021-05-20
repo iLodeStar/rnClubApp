@@ -20,25 +20,28 @@ class Members extends React.Component {
                     content={<Sidebar navigation={this.props.navigation} />}
                     onClose={() => this.closeDrawer()}
                     tapToClose={true}>
-                    <Header>
-                        <Left>
+                    <Header style={{ backgroundColor: "black" }}>
+						<Left>
 
-                            <Button transparent onPress={() => this.openDrawer()} >
-                                <Icon name='menu' />
-                            </Button>
-
-                        </Left>
-                        <Body>
-                            <Title>Members</Title>
-                        </Body>
-                        <Right />
-                    </Header>
+							<Button transparent onPress={() => this.openDrawer()} >
+								<Icon name='menu' />
+							</Button>
+						</Left>
+						<Body>
+							<Title>Members</Title>
+						</Body>
+						<Right >
+							<Button transparent  onPress={() => { this.props.navigation.navigate('Login') }} >
+								<Icon name='log-out' />
+							</Button>
+						</Right>
+					</Header>
                     <Content>
                         <List>
                             <Card  >
                                 <CardItem header style={{backgroundColor: "#ffecb1"}}>
                                     <Thumbnail  square large source={{uri: uri}} />
-                                    <Text>{"         "}FarziFauji</Text>
+                                    <Text>{"         "}Manan Khanna</Text>
                                 </CardItem>
                                 <CardItem style={{backgroundColor: "#ffecb1"}}>
                                     <Body>
@@ -58,7 +61,7 @@ class Members extends React.Component {
                             <Card  >
                                 <CardItem header style={{backgroundColor: "#ecb1ff"}}>
                                     <Thumbnail  square large source={{uri: "https://images.unsplash.com/photo-1546776230-12697ec9e7df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1191&q=80"}} />
-                                    <Text>{"         "}Kankhes</Text>
+                                    <Text>{"         "}Ankit Arora</Text>
                                 </CardItem>
                                 <CardItem style={{backgroundColor: "#ecb1ff"}}>
                                     <Body>
@@ -78,7 +81,7 @@ class Members extends React.Component {
                             <Card  >
                                 <CardItem header style={{backgroundColor: "#3bcbff"}}>
                                     <Thumbnail  square large source={{uri: "https://images.unsplash.com/photo-1561629910-39ca0ecfbc19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80"}} />
-                                    <Text>{"         "}LodeStar</Text>
+                                    <Text>{"         "}Shivani Verma</Text>
                                 </CardItem>
                                 <CardItem style={{backgroundColor: "#3bcbff"}}>
                                     <Body>
@@ -98,7 +101,7 @@ class Members extends React.Component {
                             <Card  >
                                 <CardItem header style={{backgroundColor: "#d0ff4f"}}>
                                     <Thumbnail  square large source={{uri: "https://images.unsplash.com/photo-1614270292166-d5ea354118de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"}} />
-                                    <Text>{"         "}AlphaPolaris</Text>
+                                    <Text>{"         "}Dhruv Pathak</Text>
                                 </CardItem>
                                 <CardItem style={{backgroundColor: "#d0ff4f"}}>
                                     <Body>
@@ -118,11 +121,24 @@ class Members extends React.Component {
                         </List>
                     </Content>
                     <Footer>
-                        <FooterTab>
-                            <Button full>
-                                <Text>Copyright epic centre 2021.</Text>
-                            </Button>
-                        </FooterTab>
+                    <FooterTab>
+							<Button vertical >
+								<Icon  name="newspaper"  onPress={() => { this.props.navigation.navigate('Home') }}/>
+								<Text>Home</Text>
+							</Button>
+							<Button vertical active>
+								<Icon active name="person"  onPress={() => { this.props.navigation.navigate('Members') }} />
+								<Text>Members</Text>
+							</Button>
+							<Button vertical >
+								<Icon name="stats-chart"  onPress={() => { this.props.navigation.navigate('Wins') }} />
+								<Text>Wins</Text>
+							</Button>
+							<Button vertical>
+								<Icon name="calendar"  onPress={() => { this.props.navigation.navigate('Schedule') }} />
+								<Text>Schedule</Text>
+							</Button>
+						</FooterTab>
                     </Footer>
                 </Drawer>
             </Container>

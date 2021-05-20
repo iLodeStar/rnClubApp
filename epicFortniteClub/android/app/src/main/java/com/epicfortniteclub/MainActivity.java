@@ -11,7 +11,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "epicFortniteClub";
+    return "Epic Centre";
   }
 
     @Override

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "795925180415",
-    "project_id": "authclub-e7729",
-    "storage_bucket": "authclub-e7729.appspot.com"
+    "project_number": "103374157561",
+    "project_id": "epic-centre-ad297",
+    "storage_bucket": "epic-centre-ad297.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:795925180415:android:9b89f33e69ea6b717481ca",
+        "mobilesdk_app_id": "1:103374157561:android:29ad7ecfb39fd024e45428",
         "android_client_info": {
           "package_name": "com.epicfortniteclub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "795925180415-jl8epg1iefvd3hleftmb94ca2omkm7ga.apps.googleusercontent.com",
+          "client_id": "103374157561-dmjtsosd916fupsn00v7qrs07sct36hr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD0ZjjUE2fRTliOqQXLSKqV1Qz6z34wbgE"
+          "current_key": "AIzaSyAICcyhFJoghvCyDSPacUV2RagjCa5pXlM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "795925180415-jl8epg1iefvd3hleftmb94ca2omkm7ga.apps.googleusercontent.com",
+              "client_id": "103374157561-dmjtsosd916fupsn00v7qrs07sct36hr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

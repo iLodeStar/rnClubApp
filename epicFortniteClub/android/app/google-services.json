@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "795925180415",
+    "project_id": "authclub-e7729",
+    "storage_bucket": "authclub-e7729.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795925180415:android:9b89f33e69ea6b717481ca",
+        "android_client_info": {
+          "package_name": "com.epicfortniteclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795925180415-jl8epg1iefvd3hleftmb94ca2omkm7ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0ZjjUE2fRTliOqQXLSKqV1Qz6z34wbgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795925180415-jl8epg1iefvd3hleftmb94ca2omkm7ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,7 +18,7 @@ class Home extends React.Component {
 			<Container style={{ paddingTop: 20 }}>
 				<Drawer
 					ref={(ref) => { this.drawer = ref; }}
-					content={<Sidebar navigation={this.props.navigation} />}
+					content={<Sidebar logout={this.props.logout} navigation={this.props.navigation} />}
 					onClose={() => this.closeDrawer()}
 					tapToClose={true}>
 					<Header style={{ backgroundColor: "black" }}>
@@ -32,7 +32,7 @@ class Home extends React.Component {
 							<Title>Home</Title>
 						</Body>
 						<Right >
-							<Button transparent  onPress={() => { this.props.navigation.navigate('Login') }} >
+							<Button transparent  onPress={() => { this.props.logout() }} >
 								<Icon name='log-out' />
 							</Button>
 						</Right>
